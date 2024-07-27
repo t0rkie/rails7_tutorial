@@ -50,6 +50,7 @@ gem "sassc-rails"
 # 以下追加
 gem 'ridgepole'
 gem 'active_model_serializers'
+gem "bootstrap-sass",  "3.4.1"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
