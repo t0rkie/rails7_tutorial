@@ -20,6 +20,9 @@ Docker × Rails × PostgreSQL
 6.  docker compose exec web rake db:create
 
 
+# API追加方法
+
+
 # エラー対応
 
 #### gem追加後のbundle installでこける場合
