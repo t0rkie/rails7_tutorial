@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   get "/about", to: "static_pages#about"
   get "/no_title", to: "static_pages#no_title"
 
+  get "/signup", to: "users#new"
+
   namespace :api do
     namespace :v1 do
       get "static_pages/home"
