@@ -21,6 +21,21 @@ Docker × Rails × PostgreSQL
 
 
 # API追加方法
+適当なAPI用のコントローラを追加し、jsonで返すようにするとAPIの振る舞いになる。
+
+# セキュアパスワード
+1. Userモデルにpassword_digestカラムを追加
+2. GEM bcryptを追加
+3. has_secure_passwordメソッドがUserモデル内で使えるようになる。また、モデルに仮想的な属性passwordとpassword_confirmationが自動で付与される。
+
+
+# PgAdmin接続情報
+- host name: db
+- port: 5432
+- database: postgres
+- username: postgres
+- password: password
+
 
 
 # エラー対応
