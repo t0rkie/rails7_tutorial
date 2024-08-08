@@ -7,9 +7,16 @@ Rails.application.routes.draw do
 
   get "/signup", to: "users#new"
 
+  # resourceはRESTによるリソースアクセス時に用いる
+  # 全てのアクションが利用可能になる
+  resources :users
+
+  # API
   namespace :api do
     namespace :v1 do
       get "static_pages/home"
+
+      resources :users
     end
   end
 
