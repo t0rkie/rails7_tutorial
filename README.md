@@ -15,9 +15,24 @@ Docker × Rails × PostgreSQL
 
 4. docker compose build
 
-5. docker-compose up -d
+5. docker compose up -d
 
-6.  docker compose exec web rake db:create
+6. docker compose exec web rake db:create
+
+# DB周り
+## PgAdmin接続情報
+- host name: db
+- port: 5432
+- database: postgres
+- username: postgres
+- password: password
+
+
+## DBリセット
+```
+docker compose exec web rails db:migrate:reset
+```
+
 
 
 # API追加方法
@@ -29,13 +44,9 @@ Docker × Rails × PostgreSQL
 3. has_secure_passwordメソッドがUserモデル内で使えるようになる。また、モデルに仮想的な属性passwordとpassword_confirmationが自動で付与される。
 
 
-# PgAdmin接続情報
-- host name: db
-- port: 5432
-- database: postgres
-- username: postgres
-- password: password
-
+# SSL対応
+1. config/production.rbのforce_sslをtrueに
+2. config/puma.rbの設定
 
 
 # エラー対応
